@@ -6,11 +6,17 @@
       </a>
       <span class="mb-3 mb-md-0 text-muted">&copy; 2023 Company, Inc</span>
     </div>
-
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-      <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+    <li><%= link_to "Agreement", "#", class: "nav-link px-2 link-dark" %></li>
+    <li><%= link_to "Ratings", "#", class: "nav-link px-2 link-dark" %></li>
+    <li><%= link_to "Pricing", "#", class: "nav-link px-2 link-dark" %></li>
+    <li><%= link_to "FAQs", "#", class: "nav-link px-2 link-dark" %></li>
+    <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
     </ul>
+
+    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+      <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+    </form>
+
   </footer>
 </div>

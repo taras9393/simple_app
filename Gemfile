@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'jquery-rails'
 
+gem 'will_paginate' 
+gem 'bootstrap-will_paginate'
+
 gem 'devise'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

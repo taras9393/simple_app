@@ -1,0 +1,36 @@
+<div class="container col-xxl-8 px-4 py-5 form-brdr">
+  <div class="text-center">
+    <h2 class="h2 mb-3 fw-normal">Add new bet</h2>
+    <br>
+    <%= form_for(@bet) do |f| %>
+    <%= render "layouts/bet_errors" %>
+      <%= f.label :title, "Matchday" %>
+      <%= f.text_field :title, class: "form-control" %>
+      <br>
+      <%= f.label :body, "Description (*optionally)" %>
+      <%= f.text_area(:body, size: "30*50", class: "form-control") %>
+      <br>
+      <%= f.label :result, "Result: " %>
+      <%= f.select :result,
+      {
+        "Threeway" => [ ["First win", "P1"], ["Draw", "X"], ["Second win", "P2"] ],
+
+        "Asian Handicap" => [ ["Handicap 1 (-1.5)", "AH 1(-1.5)"], ["Handicap 1 (+1.5)", "AH 1(+1.5)"],
+        ["Handicap 2 (-1.5)", "AH 2(-1.5)"], ["Handicap 2 (+1.5)", "AH 2(+1.5)"],
+        ["Handicap 1 (0)", "AH 1(0)"], ["Handicap 2 (0)", "AH 2(0)"] ],
+
+        "Total" => [ ["Total over 0,5", "Over 0,5"], ["Total under 0,5", "Under 0,5"],
+        ["Total over 1,5", "Over 1,5"], ["Total under 1,5", "Under 1,5"],
+        ["Total over 2,5", "Over 2,5"], ["Total under 2,5", "Under 2,5"] ],
+
+        "Goals" => [ ["Both to score", "BTScore"], ["First team over(0,5)", "IT 1 Over(0,5)"], ["Second team over(0,5)", "IT 2 Over(0,5)"] ],
+
+        "Double chance" => [ ["First win OR Draw", "1X"], ["No Draw", "12"], ["Second win OR Draw", "2X"] ]
+      } %>
+
+
+      <br>
+      <%= f.submit "Add new bet", class: "user-mt" %>
+    <% end %>
+  </div>
+</div>

@@ -9,9 +9,9 @@
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       <li><%= link_to "Home Page", root_path, class: "nav-link px-2 link-dark" %></li>
       <li><%= link_to "About Project", about_path, class: "nav-link px-2 link-dark" %></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Bet of the day</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Ratings</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">ADD</a></li>
+      <li><%= link_to "Bet of the day", bets_path, class: "nav-link px-2 link-dark main-link" %></li>
+      <li><%= link_to "Ratings", "#", class: "nav-link px-2 link-dark" %></li>
+      <li><%= link_to "Statistic", "#", class: "nav-link px-2 link-dark" %></li>
     </ul>
 
     <% if !user_signed_in? %>
@@ -25,9 +25,14 @@
         <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
       </a>
       <ul class="dropdown-menu text-small">
-        <li><a class="dropdown-item" href="#">New project...</a></li>
+        <% if current_user.admin?%>
+        <li><%= link_to "Add new BET", new_bet_path, class: "dropdown-item" %></li>
+        <li><%= link_to "View all users", users_path, class: "dropdown-item" %></li>
+        <% else %>
+        <li><%= link_to "Add new BET", new_bet_path, class: "dropdown-item disabled-link" %></li>
+        <% end %>
         <li><%= link_to "Edit account", edit_user_registration_path, class: "dropdown-item" %></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><%= link_to "Profile", profile_user_path(current_user.id), class: "dropdown-item" %></li>
         <li><hr class="dropdown-divider"></li>
         <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "dropdown-item" %></li>
       </ul>

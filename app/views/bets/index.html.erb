@@ -1,0 +1,22 @@
+<div class="container col-xxl-8 px-4 py-5 user-cont">
+  <div class = "text-center">
+    <h1>List of all bets</h1>
+  </div>
+  <br>
+
+  <div class = "user-bets">
+    <% @bets.sort{|a,b| a.created_at <=> b.created_at}.reverse.each do |b| %>
+
+    <div class = "user-bets-title"><%= b.title %></div>
+
+    <div class = "user-bets-body"><%= b.body %></div>
+    <div class = "user-bets-body"><%= b.result %></div>
+    <div class = "user-bets-body"><%= b.created_at %></div>
+    <% if user_signed_in? && current_user.admin? %>
+    <div class = "user-bets-body"><%= link_to "Delete match", bet_path(b.id), method: :delete %></div>
+    <% end %>
+    <hr>
+    <% end %>
+
+  </div>
+</div>

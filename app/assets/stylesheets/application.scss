@@ -1,5 +1,6 @@
  @import "bootstrap";
 
+
 body {
   background: #b8f4eb;
   padding-top: 10px;
@@ -9,6 +10,15 @@ body {
   width: 400px;
   background: #b8e7f4;
 
+}
+
+#error_explanation
+{
+color: red;
+  ul{
+    color: red;
+    margin: 0 0 30px 0;
+  }
 }
 
 .user-mt{
@@ -21,6 +31,35 @@ body {
 
 .user-cont{
   background: #b8e7f4;
+  margin-bottom: 80px;
+}
+
+.user-bets{
+  border: 1px solid yellow;
+  width: 700px;
+  margin-left: 300px;
+}
+
+.disabled-link{
+  color: grey;
+  pointer-events: none;
+}
+
+.main-link{
+  background: #88f389;
+  font-weight: bold;
+  font-size: 1.1em;
+
+}
+
+.user-bets-title{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.user-bets-body{
+  text-align: justify;
+  padding: 10px
 }
 
 aside {

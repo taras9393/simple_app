@@ -12,13 +12,15 @@
       </div>
     </div>
   </div>
-  Morbi consequat, neque a congue semper, dui mi pellentesque turpis, quis feugiat turpis turpis rutrum massa. Nulla ultrices purus a elit dapibus facilisis. Nunc ante augue, rhoncus sit amet risus vel, accumsan pulvinar lectus. Curabitur commodo quis ante nec scelerisque. Morbi sodales odio a porttitor viverra.
-
-Suspendisse neque mi, congue et dapibus et, sagittis et diam. Nulla et turpis sed leo iaculis imperdiet sit amet at est. Praesent felis felis, convallis vitae sapien at, convallis volutpat libero. Phasellus semper est ut lacus tincidunt sagittis. Mauris viverra luctus sem id maximus. Curabitur tincidunt molestie molestie. Morbi in nulla massa. Phasellus varius nibh vitae porta cursus. Nulla ut neque vitae ante mollis fringilla nec ut est.
-
-Nam quis erat turpis. Nunc id consectetur ligula. Suspendisse tempor eros non laoreet ultrices. Aenean iaculis sodales condimentum. Nullam tempus velit quis ullamcorper imperdiet. In a metus vestibulum, posuere nunc nec, dignissim risus. Fusce laoreet ante ut ex ultrices scelerisque a tincidunt mauris. Proin sed neque mollis est congue dapibus. Sed sem ex, rhoncus et porta vel, dictum ac nisl. Donec ut tristique turpis, eget eleifend neque. Duis sodales pretium viverra. Mauris lobortis magna venenatis massa ultricies commodo. Curabitur enim tortor, finibus quis odio non, rutrum accumsan libero.
-
-Suspendisse potenti. In porta eros ut tempor feugiat. Fusce varius lobortis urna quis interdum. Nunc felis ante, vehicula nec quam id, egestas cursus eros. Sed sit amet neque odio. Sed venenatis congue lectus ac pellentesque. Ut laoreet volutpat auctor. Integer in euismod nulla. Phasellus metus sapien, interdum facilisis sagittis in, lacinia nec nisi. Etiam vulputate eu risus in venenatis. Nulla odio neque, tincidunt sed felis malesuada, condimentum scelerisque sem. Praesent convallis rutrum ipsum, eget fringilla dui interdum in.
-
-Phasellus non orci eu purus euismod lobortis vitae vehicula ex. Vivamus quis feugiat massa, id consectetur lacus. In urna urna, interdum eget facilisis nec, vulputate a leo. Nunc tempus tellus sed nibh venenatis pharetra. In eu vehicula erat. Proin eu odio felis. Donec tincidunt dolor id mi feugiat, et laoreet risus ullamcorper. Donec quis risus laoreet mi elementum fermentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed lacus tellus, aliquam in lobortis fermentum, malesuada in ligula. Quisque tempus, odio sed consequat venenatis, est lacus imperdiet magna, eu consequat sapien ante ultrices sapien. Donec ac ligula at lacus sagittis convallis sed et felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+  Morbi consequat, neque a congue semper, dui mi pellentesque turpis, quis feugiat turpis turpis rutrum massa.
+  Nulla ultrices purus a elit dapibus facilisis.
+  Nunc ante augue, rhoncus sit amet risus vel, accumsan pulvinar lectus. C
+  urabitur commodo quis ante nec scelerisque.
+  Morbi sodales odio a porttitor viverra.
+<br>
+<% if !current_user.nil? && current_user.admin? %>
+<h2><%= "You are admin!!"%></h2>
+<% else %>
+<h2><%= "You are NOT admin" %></h2>
+<% end %>
 </div>
